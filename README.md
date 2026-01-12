@@ -4,7 +4,23 @@ A deep learning-based system for automated lung cancer classification using hist
 
 ## 🎯 Overview
 
-LungAI is a PyTorch-based medical image classification system that leverages transfer learning with ResNet-50 to detect and classify different types of lung cancer from histopathological images. The model achieves high accuracy in distinguishing between three types of lung cancer and normal tissue.
+LungAI is a PyTorch-based medical image classification system that leverages transfer learning with ResNet-50 to detect and classify different types of lung cancer from histopathological images. This project represents the newest version, now using PyTorch for improved performance and flexibility.
+
+## 📈 Model Performance
+
+The model achieves impressive results:
+
+- **98% accuracy** in distinguishing between cancerous and non-cancerous cases
+- **83% overall accuracy** in differentiating between four specific types of lung conditions
+
+### Per-Class Performance (F1-Scores)
+
+| Cancer Type | F1-Score |
+|------------|----------|
+| **Adenocarcinoma** | 82% |
+| **Large Cell Carcinoma** | 85% |
+| **Normal (non-cancerous)** | 98% |
+| **Squamous Cell Carcinoma** | 76% |
 
 ## 🔬 Cancer Types Detected
 
@@ -23,21 +39,25 @@ The model uses a modified ResNet-50 architecture with:
   - Dropout (0.5)
   - Linear layer (256 → 4 classes)
 
-## 📁 Project Structure
+## 📁 Repository Structure
 
 ```
 LungAI-main/
 │
-├── app.py                  # Gradio web interface for predictions
-├── run.py                  # Command-line inference script
-├── architecture.py         # Model architecture and training code
-├── preprocess.py          # Data preprocessing utilities
-├── requirements.txt       # Python dependencies
-├── README.md             # Project documentation
+├── app.py                     # Gradio web interface for predictions
+├── run.py                     # Command-line inference script
+├── architecture.py            # Model architecture and training code
+├── preprocess.py             # Data preprocessing utilities
+├── requirements.txt          # List of Python dependencies
+├── README.md                 # Project documentation
 │
-└── Model/
-    ├── lung_cancer_detection_model.pth    # PyTorch model weights
-    └── lung_cancer_detection_model.onnx   # ONNX model export
+├── Model/                    # Stores trained model files
+│   ├── lung_cancer_detection_model.pth    # PyTorch weights
+│   └── lung_cancer_detection_model.onnx   # ONNX format
+│
+├── Data/                     # (Not included) Dataset directory
+├── Processed_Data/           # (Not included) Preprocessed data
+└── assets/                   # Additional project assets
 ```
 
 ## 🚀 Installation
