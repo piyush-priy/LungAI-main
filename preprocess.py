@@ -14,7 +14,7 @@ transform = transforms.Compose([
 ])
 
 # specify the directory containing the dataset
-data_dir = 'Processed_Data'
+data_dir = 'lung-cancer/Data'
 
 # load the datasets with the specified transformations
 train_dataset = datasets.ImageFolder(os.path.join(data_dir, 'train'), transform=transform)  # load training dataset with transformations

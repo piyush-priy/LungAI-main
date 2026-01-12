@@ -130,7 +130,7 @@ if __name__ == "__main__":
     print(f"Using device: {device}")
 
     # data
-    data_dir = 'Processed_Data'
+    data_dir = 'lung-cancer/Data'
     train_dataset = datasets.ImageFolder(os.path.join(data_dir, 'train'), transform=train_transform)
     valid_dataset = datasets.ImageFolder(os.path.join(data_dir, 'valid'), transform=val_test_transform)
     test_dataset = datasets.ImageFolder(os.path.join(data_dir, 'test'), transform=val_test_transform)
